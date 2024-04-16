@@ -83,21 +83,37 @@ body {
 	<h1>Os smartphones "iPhone" sao fabricados por qual marca?</h1>		
     <div class="layout6">
         <div class="askrow">
-	        <a class="option" href="q6.html">
+	        <a class="option" onclick="reproduzirAudio()">
                 <img src="images/4.png"/><b>Samsung</b></a>
-	        <a class="option" href="q6.html">
+	        <a class="option" onclick="reproduzirAudio()">
                 <img src="images/5.png"/><b>Apple</b></a>
         </div>
         <div class="askrow">
-	        <a class="option" href="q6.html">
+	        <a class="option" onclick="reproduzirAudio()">
                 <img src="images/6.png"/><b>LG</b></a>
-	        <a class="option" href="q6.html">
+	        <a class="option" onclick="reproduzirAudio()">
                 <img src="images/7.png"/><b>Motorola</b></a>
         </div>
     </div>
   </div>
   <img class="img-bottom" src="images/final.png">
 </section>
+
+<script>
+    function reproduzirAudio() {
+        var audio = new Audio('certo.mp3');
+        audio.play();
+        
+        setTimeout(function() {
+            // CAMINHO DA PROXIMA PÀGINA
+            window.location.href = "q6.html";
+        }, 500);
+    }
+
+    document.addEventListener('click', function() {
+        reproduzirAudio();
+    }, { once: true });
+</script>
 
 </body>
 </html>

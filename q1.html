@@ -78,14 +78,30 @@ body {
   <div class="content center">
 	<h1>Em Qual Canal passa o BBB 2024?</h1>		
     <div class="layout3">
-	    <a class="option"  href="q2.html">SBT<img src="images/sbt.png"/></a>
-        <a class="option"  href="q2.html">GLOBO<img src="images/globo.png"/></a>
-        <a class="option"  href="q2.html">BAND<img src="images/band.png"/></a>    
+	    <a class="option"  onclick="reproduzirAudio()">SBT<img src="images/sbt.png"/></a>
+        <a class="option"  onclick="reproduzirAudio()">GLOBO<img src="images/globo.png"/></a>
+        <a class="option"  onclick="reproduzirAudio()">BAND<img src="images/band.png"/></a>    
             	        
     </div>
   </div>
   <img class="img-bottom" src="images/final.png">
 </section>
+
+<script>
+    function reproduzirAudio() {
+        var audio = new Audio('certo.mp3');
+        audio.play();
+        
+        setTimeout(function() {
+            // CAMINHO DA PROXIMA PÀGINA
+            window.location.href = "q2.html";
+        }, 500);
+    }
+
+    document.addEventListener('click', function() {
+        reproduzirAudio();
+    }, { once: true });
+</script>
 
 </body>
 </html>

@@ -73,6 +73,21 @@ h3 {
     width: 80%;
     max-width: 300px;
 }
+
+.a-btn {
+    padding-left: 0!important; 
+    padding-right: 0!important; 
+    animation: pulse 1.5s infinite alternate;
+    }
+@keyframes pulse{
+  0%,100%{transform:scale(.9);opacity:.9;}
+  50%{transform:scale(1);opacity:1;}
+  }
+  @-webkit-keyframes pulse{
+  0%,100%{-webkit-transform:scale(.95);opacity:.7}
+  50%{-webkit-transform:scale(1);opacity:1}
+}
+
 </style>
 
 </head> 
@@ -85,7 +100,7 @@ h3 {
     <h3>Parceria BBB 2024 com a Apple, responda o quizz corretamente e <b>ganhe um iPhone 15 Pro Max!</b> (APENAS 36 IPHONES DISPONÍVEIS)</h3>
     </div>
     <div class="content center">
-        <a class="continue" href="q1.html">Quero Participar!</a>
+        <a class="continue a-btn" href="q1.html">Quero Participar!</a>
     </div>
     <img class="img-bottom" src="images/final.png">
 </section>

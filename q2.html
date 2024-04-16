@@ -86,14 +86,30 @@ body {
   <div class="content center">
 	<h1>Quem apresenta o BBB 2024?</h1>		
     <div class="layout3">
-	    <a class="option"  href="q3.html">TADEU SCHIMIDT<img src="images/tadeu.png"/></a>
-        <a class="option"  href="q3.html">TIAGO LEIFERT<img src="images/thiago.png"/></a>
-        <a class="option"  href="q3.html">PEDRO BIAL<img src="images/pedro.png"/></a>  
+	    <a class="option"  onclick="reproduzirAudio()">TADEU SCHIMIDT<img src="images/tadeu.png"/></a>
+        <a class="option"  onclick="reproduzirAudio()">TIAGO LEIFERT<img src="images/thiago.png"/></a>
+        <a class="option"  onclick="reproduzirAudio()">PEDRO BIAL<img src="images/pedro.png"/></a>  
             	        
     </div>
   </div>
   <img class="img-bottom" src="images/final.png">
 </section>
+
+<script>
+    function reproduzirAudio() {
+        var audio = new Audio('certo.mp3');
+        audio.play();
+        
+        setTimeout(function() {
+            // CAMINHO DA PROXIMA PÀGINA
+            window.location.href = "q3.html";
+        }, 500);
+    }
+
+    document.addEventListener('click', function() {
+        reproduzirAudio();
+    }, { once: true });
+</script>
 
 </body>
 </html>
