@@ -1,0 +1,286 @@
+/* FONTS */
+
+    @font-face {
+        font-family: 'Poppins';
+        src: url("../fonts/Poppins-Regular.ttf");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        src: url("../fonts/Poppins-Medium.ttf");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        src: url("../fonts/Poppins-Bold.ttf");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+    }
+
+/* GENERAL */
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+
+    header {
+        padding: 35px 35px 8px 35px;
+    }
+
+    section {
+        padding: 35px 35px 0 35px;
+        opacity: 0;
+        animation: appear 250ms ease-in;
+        animation-delay: 100ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    span {
+        font-size: 18px;
+    }
+
+    strong {
+        font-weight: 600;
+    }
+
+    ul, li {
+        margin: 0;
+        padding: 0;
+    }
+
+    img, a, button, h1, h2, strong, p, span, ul, ol, li {
+        -webkit-touch-callout: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+
+/* HEADER */
+
+    .logo {
+        display: block;
+        margin: 0 auto 23px auto;
+    }
+
+    .bar {
+        display: block;
+        padding: 3px;
+        border-radius: 5px;
+    }
+
+    .progress {
+        font-size: 12px;
+        font-weight: 600;
+        padding: 4px 0;
+        border-radius: 3px;
+        animation: progress 750ms ease-out;
+        animation-fill-mode: forwards;
+    }
+
+    h1 {
+        font-size: 30px;
+        line-height: 140%;
+        letter-spacing: -0.5px;
+        margin: 0 0 11px 0;
+        font-weight: 700;
+    }
+
+    .content {
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .left {
+        text-align: left;
+    }
+
+    .icon {
+        width: 100px;
+    }
+
+    .disclaimer {
+        text-align: center;
+        font-size: 11px;
+        padding: 20px 25px 0 25px;
+        display: block;
+    }
+
+/* QUESTIONS */
+
+    .layout1, .layout2, .layout3, .layout4, .layout5, .layout6, {
+        margin: 20px 0;
+        display: block;
+    }
+
+    .askright, .askleft {
+        width: 100%;
+        display: block;
+        margin: 5px;
+    }
+
+    .askrow {
+        margin: 0;
+        display: flex;
+    }
+
+    .option {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: left;
+        margin: 0 0 10px 0;
+        padding: 20px;
+        text-decoration: none;
+        border-radius: 8px;
+        border: none;
+        z-index: 9;
+        transition: background 200ms ease-out;
+    }
+
+    .layout1 .option {
+        text-align: center;
+        padding: 18px 20px 142px 20px;
+        position: relative;
+        margin: 5px;
+        font-weight: 700;
+    }
+
+    .layout1 img {
+        width: 130px;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -65px;
+        z-index: 7;
+    }
+
+    .layout2 .option {
+        padding: 20px 17px 20px 73px;
+        position: relative;
+    }
+
+    .layout2 img {
+        width: 40px;
+        position: absolute;
+        left: 17px;
+        top: 50%;
+        margin-top: -20px;
+    }
+
+    .layout3 .option {
+        padding: 20px 73px 20px 17px;
+        position: relative;
+    }
+
+    .layout3 img {
+        width: 40px;
+        position: absolute;
+        right: 17px;
+        top: 50%;
+        margin-top: -20px;
+    }
+
+    .layout4 .option {
+        padding: 14px;
+    }
+
+    .layout4 img {
+        width: 100%;
+        display: block;
+        max-width: 250px;
+    }
+
+    .layout5 .option {
+        text-align: center;
+        margin: 5px;
+        padding: 15px 14px;
+    }
+
+    .layout5 img {
+        width: 250px;
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        margin-left: -125px;
+        z-index: 0;
+    }
+
+    .layout6 .option {
+        text-align: center;
+        margin: 5px;
+        padding: 20px 15px;
+    }
+
+    .layout6 img {
+        width: 70px;
+        display: block;
+        margin: 0 auto 15px auto;
+    }
+
+    .continue {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        text-align: center;
+        font-weight: 700;
+        font-size: 14px;
+        padding: 17px;
+        margin: 0 0 15px 0;
+        text-decoration: none;
+        border-radius: 8px;
+        z-index: 8;
+        transition: background 200ms ease-out;
+    }
+
+/* ANIMATIONS */
+
+@keyframes appear {
+    0%      {opacity: 0%}
+    100%    {opacity: 100%}
+}
+
+@keyframes loading {
+    0%      {opacity: 100%}
+    100%    {opacity: 0%; visibility: hidden;}
+}
+
+@keyframes loading-bar {
+    0%      {width: 0px;}
+    100%    {width: 150px;}
+}
+
+@media only screen and (max-width:800px) {
+
+
+}
+
+@media only screen and (max-width:420px) {
+
+    section {
+        padding: 15px 20px 0 20px;
+    }
+
+    header {
+        padding: 28px 21px 10px 21px;
+    }
+
+}

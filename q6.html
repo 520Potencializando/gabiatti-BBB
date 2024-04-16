@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+<!-- META TAGS -->
+
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>iPhone - BBB</title>
+
+<!-- LINKS -->
+
+<link rel="stylesheet" href="scripts/styles.css">
+<link rel="shortcut icon" href="images/fav.html">
+
+<!-- STYLES -->
+
+<style>
+
+* {
+    color: #FFFFFF;
+}
+body {
+    background: #000000;
+}
+.logo {
+    width: 150px;
+}
+.option {
+    color: #FFFFFF;
+    background: transparent;
+    border: solid 1px #F84F11;
+}
+.option:hover {
+    color: #DDDDDD;
+    background: #F84F11;
+    border: solid 1px #F84F11;
+}
+.img-bottom {
+    display: block;
+    margin: 50px auto;
+    width: 80%;
+    max-width: 300px;
+}
+.layout6 img {
+    width: 100px;
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 10px;
+}
+h1 {
+    font-size: 40px;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+</style>
+
+</head> 
+<body>
+    
+<header>
+  <div class="content center">
+    <img class="logo" src="images/logo.png" />
+
+  </div>
+</header>
+
+<section>
+  <div class="content center">
+	<h1>PARABÉNS VOCÊ GANHOU!</h1>
+    <h3>VOCÊ GANHOU UM IPHONE 15 PRO MAX GRÁTIS, <span style="color:yellow;">PAGUE SOMENTE O FRETE.</span> SELECIONE A COR DO SEU APARELHO ABAIXO.</h3> 
+    <div class="layout6">
+        <div class="askrow">
+	        <a class="option" onclick="linkFinal()">
+                <img src="images/preto.png"/>
+                Levar cor<br><b>PRETO</b>
+            </a>
+	        <a class="option" onclick="linkFinal()">
+                <img style="width: 125px;" src="images/cinza.png"/>
+                Levar cor<br><b>CINZA</b>
+            </a>
+        </div>
+        <div class="askrow">
+	        <a class="option" onclick="linkFinal()">
+                <img src="images/branco.png"/>
+                Levar cor<br><b>BRANCO</b>
+            </a>
+	        <a class="option" onclick="linkFinal()">
+                <img src="images/azul.png"/>
+                Levar cor<br><b>AZUL</b>
+            </a>
+        </div>
+    </div>
+  </div>
+  <img class="img-bottom" src="images/final.png">
+</section>
+
+<script type="text/javascript">
+
+// trocar o link do checkout aqui
+function linkFinal() {
+    window.location.href = "https://www.google.com";
+}
+</script>
+
+</body>
+</html>
