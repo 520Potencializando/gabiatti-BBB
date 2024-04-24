@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+
+<!-- META TAGS -->
+
+<meta charset="UTF-8">
+<meta property="og:type" content="website" />
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>Quiz</title>
+
+<!-- LINKS -->
+
+<link rel="stylesheet" href="scripts/styles.css">
+<link rel="shortcut icon" href="images/fav.html">
+
+<!-- STYLES -->
+
+<style>
+
+.hide {
+    display: none;
+}
+
+* {
+    color: #FFFFFF;
+}
+body {
+    background: #000000;
+}
+
+.option {
+    color: #FFFFFF;
+    background: transparent;
+    border: solid 1px #F84F11;
+    font-size: 20px;
+    text-align: center;
+}
+.option:hover {
+    color: #DDDDDD;
+    background: #F84F11;
+    border: solid 1px #F84F11;
+}
+
+.hl-inicio {
+    font-size: 60px;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+.continue {
+    animation: appear 500ms ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    background: #F84F11;
+    color: #FFFFFF;
+    border: solid 1px transparent;
+    opacity: 0;
+}
+.continue:hover {
+    background: #ff0026;
+    color: #FFFFFF;
+    border: solid 1px transparent;
+}
+
+.img-bottom {
+    display: block;
+    margin: 50px auto;
+    width: 80%;
+    max-width: 300px;
+}
+
+.a-btn {
+    padding-left: 0!important; 
+    padding-right: 0!important; 
+    animation: pulse 1.5s infinite alternate;
+    }
+@keyframes pulse{
+  0%,100%{transform:scale(.9);opacity:.9;}
+  50%{transform:scale(1);opacity:1;}
+  }
+  @-webkit-keyframes pulse{
+  0%,100%{-webkit-transform:scale(.95);opacity:.7}
+  50%{-webkit-transform:scale(1);opacity:1}
+}
+
+@keyframes progress {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+</style>
+
+</head> 
+<body>
+
+<header style="max-width: 500px;margin: auto;">
+  <div class="content center">
+    <img class="logo" src="images/logo.png" />
+  </div>
+  <div class="bar">
+    <div class="progress"></div>
+    </div>
+</header>
+
+<section style="padding-top: 30px;" class="black">
+
+    <!-- PÁGINA INICIAL -->
+    <div id="info-inicial" class="black">
+      <div class="content center">	
+        <h1 class="hl-inicio">Ganhe um iPhone 15!</h1>
+        <h3>Parceria BBB 2024 com a Apple, responda o quizz corretamente e <b>ganhe um iPhone 15 Pro Max!</b> (APENAS 36 IPHONES DISPONÍVEIS)</h3>
+        </div>
+        <div class="content center">
+            <a onclick="trocarElemento ('info-inicial', 'pergunta-1')" class="continue a-btn">Quero Participar!</a>
+        </div>
+    </div>
+
+    <!-- PRIMEIRA PERGUNTA -->
+    <div class="hide" id="pergunta-1">
+        <div class="content center">
+            <h1>Em Qual Canal passa o BBB 2024?</h1>        
+            <div class="layout3">
+                <a class="option" onclick="barMais(), trocarElemento ('pergunta-1', 'pergunta-2')">SBT<img src="images/sbt.png"/></a>
+                <a class="option" onclick="barMais(), trocarElemento ('pergunta-1', 'pergunta-2')">GLOBO<img src="images/globo.png"/></a>
+                <a class="option" onclick="barMais(), trocarElemento ('pergunta-1', 'pergunta-2')">BAND<img src="images/band.png"/></a>                                
+            </div>
+        </div>
+    </div>
+
+    <!-- SEGUNDA PERGUNTA -->
+    <div class="hide" id="pergunta-2">
+        <div class="content center">
+            <h1>Quem apresenta o BBB 2024?</h1>     
+            <div class="layout3 q2">
+                <a class="option"  onclick="barMais(), trocarElemento ('pergunta-2', 'pergunta-3')">TADEU SCHIMIDT<img src="images/tadeu.png"/></a>
+                <a class="option"  onclick="barMais(), trocarElemento ('pergunta-2', 'pergunta-3')">TIAGO LEIFERT<img src="images/thiago.png"/></a>
+                <a class="option"  onclick="barMais(), trocarElemento ('pergunta-2', 'pergunta-3')">PEDRO BIAL<img src="images/pedro.png"/></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- TERCEIRA PERGUNTA -->
+    <div class="hide" id="pergunta-3">
+        <div class="content center">
+            <h1>Nos domingos, o BBB 24 começa depois de qual progama?</h1>      
+            <div class="layout3 q3">
+                <a class="option"  onclick="barMais(), trocarElemento ('pergunta-3', 'pergunta-4')">JORNAL NACIONAL<img src="images/jn.png"/></a>
+                <a class="option"  onclick="barMais(), trocarElemento ('pergunta-3', 'pergunta-4')">ALTAS HORAS<img style="top: 52%;" src="images/horas.png"/></a>
+                <a class="option"  onclick="barMais(), trocarElemento ('pergunta-3', 'pergunta-4')">FATÁSTICO<img src="images/fantastico.png"/></a>                      
+            </div>
+        </div>
+    </div>
+
+    <!-- QUARTA PERGUNTA -->
+    <div class="hide" id="pergunta-4">
+        <div class="content center">
+            <h1>O que pode deixar um participante IMUNE ao paredão?</h1>        
+            <div class="layout3 q4">
+                <a class="option"  onclick="barMais(), trocarElemento ('pergunta-4', 'pergunta-5')">ANJO<img src="images/3.png"/></a>
+                <a class="option"  onclick="barMais(), trocarElemento ('pergunta-4', 'pergunta-5')">MONSTRO<img src="images/2.png"/></a>
+                <a class="option"  onclick="barMais(), trocarElemento ('pergunta-4', 'pergunta-5')">BIG FONE<img src="images/1.png"/></a>                        
+            </div>
+        </div>
+    </div>
+
+    <!-- QUINTA PERGUNTA -->
+    <div class="hide" id="pergunta-5">
+        <div class="content center">
+            <h1>Os smartphones "iPhone" sao fabricados por qual marca?</h1>     
+            <div class="layout6 q5">
+                <div class="askrow">
+                    <a class="option" onclick="barMais(), trocarElemento ('pergunta-5', 'pergunta-6')">
+                        <img src="images/4.png"/><b>Samsung</b></a>
+                    <a class="option" onclick="barMais(), trocarElemento ('pergunta-5', 'pergunta-6')">
+                        <img src="images/5.png"/><b>Apple</b></a>
+                </div>
+                <div class="askrow">
+                    <a class="option" onclick="barMais(), trocarElemento ('pergunta-5', 'pergunta-6')">
+                        <img src="images/6.png"/><b>LG</b></a>
+                    <a class="option" onclick="barMais(), trocarElemento ('pergunta-5', 'pergunta-6')">
+                        <img src="images/7.png"/><b>Motorola</b></a>
+                </div>
+            </div>
+          </div>
+    </div>
+
+    <!-- SEXTA PERGUNTA -->
+    <div class="hide" id="pergunta-6">
+        <div class="content center">
+            <h1>PARABÉNS VOCÊ GANHOU!</h1>
+            <h3>VOCÊ GANHOU UM IPHONE 15 PRO MAX GRÁTIS, <span style="color:yellow;">PAGUE SOMENTE O FRETE.</span> SELECIONE A COR DO SEU APARELHO ABAIXO.</h3> 
+            <div class="layout6 q6">
+                <div class="askrow">
+                    <a class="option" onclick="linkFinal()">
+                        <img src="images/preto.png"/>
+                        Levar cor<br><b>PRETO</b>
+                    </a>
+                    <a class="option" onclick="linkFinal()">
+                        <img style="width: 125px;" src="images/cinza.png"/>
+                        Levar cor<br><b>CINZA</b>
+                    </a>
+                </div>
+                <div class="askrow">
+                    <a class="option" onclick="linkFinal()">
+                        <img src="images/branco.png"/>
+                        Levar cor<br><b>BRANCO</b>
+                    </a>
+                    <a class="option" onclick="linkFinal()">
+                        <img src="images/azul.png"/>
+                        Levar cor<br><b>AZUL</b>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img class="img-bottom" src="images/final.png">
+</section>
+
+<script type="text/javascript">
+
+// trocar o link do checkout aqui
+function linkFinal() {
+    window.location.href = "https://www.google.com";
+}
+</script>
+<script type="text/javascript">
+    //perguntas
+    function SomeHeadline() {
+      document.getElementById("info-inicial").classList.add("hide")
+    };
+
+
+    function trocarElemento (elementoAtual, proximoElemento) {
+      document.getElementById(elementoAtual).classList.add("hide");
+      document.getElementById(proximoElemento).classList.remove("hide");
+    }
+  </script>
+  <script type="text/javascript">
+    //rolar a tela automaticamente
+    function scrollToDiv(id) {
+
+      console.log("Botão clicado:", id); // Exibir o ID do botão clicado
+      var targetDiv = document.getElementById(id);
+      console.log("Div alvo da rolagem:", targetDiv.id); // Exibir o ID da div alvo
+
+      //var targetDiv = document.getElementById(id);
+      var windowHeight = window.innerHeight;
+      var divHeight = targetDiv.offsetHeight;
+      var divTop = targetDiv.getBoundingClientRect().top + window.pageYOffset;
+      var targetPosition = divTop - (windowHeight - divHeight) / 2;
+      var startPosition = window.pageYOffset;
+      var distance = targetPosition - startPosition;
+      var duration = 500;
+      var startTime = null;
+
+      function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        var timeElapsed = currentTime - startTime;
+        var run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+      }
+
+      function ease(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+      }
+
+      requestAnimationFrame(animation);
+    }
+
+  </script>
+  <script type="text/javascript">
+    var progressoAtual = 0;
+
+    function barMais() {
+    var progressBar = document.querySelector('.progress');
+    progressoAtual += 20; // Incrementando o progresso global em 20%
+    var incremento = progressoAtual > 100 ? 100 : progressoAtual;
+    progressBar.style.width = incremento + "%";
+    progressBar.style.transition = "width 0.5s ease"; // Adicionando transição suave
+}
+  </script>
+  <script>
+    function reproduzirAudio() {
+        var audio = new Audio('audio.wav');
+        audio.play();
+        
+    }
+    document.addEventListener('click', function() {
+        reproduzirAudio();
+    }, { once: true });
+</script>
+
+</body>
+</html>
