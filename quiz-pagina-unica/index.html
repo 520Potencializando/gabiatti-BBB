@@ -96,10 +96,44 @@ h3 {
     100% { width: 100%; }
 }
 
+.div-caixa{
+    background: #7b7b7b;
+    border-radius: 20px;
+    padding: 0 0 10px 0;
+
+}
+
+.line{
+    display: inline-block;
+    width: 90%;
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px 0;
+    text-align: left;
+}
+
+.line p{
+    display: inline;
+    margin-left: 15px;
+}
+
+.hl-check {
+    background: #454545;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.sumido {
+    display: none;
+}
+
 </style>
 
 </head> 
-<body>
+<body onload="paginaCheck()">
 
 <header style="max-width: 500px;margin: auto;">
   <div class="content center">
@@ -114,13 +148,55 @@ h3 {
 
     <!-- PÁGINA INICIAL -->
     <div id="info-inicial" class="black">
-      <div class="content center">	
-        <h1 class="hl-inicio">Ganhe um iPhone 15!</h1>
-        <h3>Parceria BBB 2024 com a Apple, responda o quizz corretamente e <b>ganhe um iPhone 15 Pro Max!</b> (APENAS 36 IPHONES DISPONÍVEIS)</h3>
-        </div>
-        <div class="content center">
-            <a onclick="trocarElemento ('info-inicial', 'pergunta-1')" class="continue a-btn">Quero Participar!</a>
-        </div>
+      <div class="content center">
+        <div class="div-caixa">
+            <div class="hl-check">VERIFICAÇÃO</div>
+            <div class="line"><p class="p1">⚠️ Verificando dispositivo...</p></div>
+            <div class="line div-2 sumido"><p class="p2">⚠️ Verificando Endereço IP...</p></div>
+            <div class="line div-3 sumido"><p class="p3">⚠️ Verificando Localidade...</p></div>
+            <div class="line div-4 sumido"><p class="p4">⚠️ Verificando Nacionalidade...</p></div>
+        </div>        
+      </div>
+      <div class="content center div-final sumido">
+        <h3>Você está apto!</h3>
+        <a onclick="trocarElemento ('info-inicial', 'pergunta-1')" class="continue a-btn">Começar</a>
+      </div>
+
+      <script>
+        function paginaCheck() {
+            setTimeout(function() {
+                var p1 = document.querySelector('.p1');
+                p1.textContent = '✅ Dispositivo Verificado!';
+                
+                var div2 = document.querySelector('.div-2');
+                div2.classList.remove('sumido');
+            }, 2000);
+
+            setTimeout(function() {
+                var p2 = document.querySelector('.p2');
+                p2.textContent = '✅ Endereço IP Verificado!';
+                
+                var div3 = document.querySelector('.div-3');
+                div3.classList.remove('sumido');
+            }, 4000);
+
+            setTimeout(function() {
+                var p3 = document.querySelector('.p3');
+                p3.textContent = '✅ Localidade Verificada!';
+                
+                var div4 = document.querySelector('.div-4');
+                div4.classList.remove('sumido');
+            }, 6000);
+
+            setTimeout(function() {
+                var p4 = document.querySelector('.p4');
+                p4.textContent = '✅ Nacionalidade Verificada!';
+                
+                var divFinal = document.querySelector('.div-final');
+                divFinal.classList.remove('sumido');
+            }, 8000);
+        }
+      </script>
     </div>
 
     <!-- PRIMEIRA PERGUNTA -->
